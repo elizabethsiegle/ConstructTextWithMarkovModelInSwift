@@ -1,6 +1,7 @@
 import MarkovModel
 import Foundation
-
+import Alamofire
+//import Vapor
 
 func buildText(starting: String, length: Int, file: String) -> String {
     let filename = file.split(separator: ".")
@@ -28,6 +29,7 @@ func buildWords(with text: inout String, length: Int, chain: Matrix<String>) {
     }
 }
 
+//[We're: rickroll.txt, CHAPTER: hp1.txt, Let's: illmakeamanoutofyou.txt, I: myshot.txt, Hey: helpless.txt, Hakuna: hakunamatata.txt, Thought: thankunext.txt]
 var firstWord = "We're"
 let randomText = buildText(starting: firstWord, length: 20000, file: "rickroll.txt")
 print(randomText)
